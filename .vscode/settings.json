@@ -1,0 +1,15 @@
+{
+    "editor.snippetSuggestions": "top",
+
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "emmet.syntaxProfiles": {
+        "javascript": "jsx"
+    },
+    "files.associations": {
+        "*.js": "javascriptreact"
+    },
+    "eslint.enable": true,
+    "eslint.options": { "configFile": ".eslintrc.json" }
+}
