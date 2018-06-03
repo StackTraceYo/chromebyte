@@ -5,22 +5,23 @@ import 'react-select/dist/react-select.css';
 class Selector extends Component {
 
     state = {
-        selectedOptionFrom: 'Byte',
-        selectedOptionTo: 'GigaByte',
+        selectedOptionFrom: { value: 'Byte', label: 'Byte' },
+        selectedOptionTo: { value: 'Byte', label: 'Byte' }
     };
 
     handleChangeFrom = (selectedOption) => {
-        this.setState({ selectedOptionFrom : selectedOption.value });
+        this.setState({ ...this.state, selectedOptionFrom : selectedOption});
     };
 
     handleChangeTo = (selectedOption) => {
-        this.setState({ selectedOptionTo : selectedOption.value });
+        this.setState({ ...this.state, selectedOptionTo : selectedOption});
     };
 
     render() {
 
-        const { selectedOptionFrom } = this.state.selectedOptionFrom;
-        const { selectedOptionTo } = this.state.selectedOptionTo;
+        const { selectedOptionFrom } = this.state;
+        const { selectedOptionTo } = this.state;
+   
 
         return (
             <div>
@@ -38,7 +39,7 @@ class Selector extends Component {
 
                 To
                 <Select
-                    name="select-from"
+                    name="select-to"
                     isSearchable={true}
                     value={selectedOptionTo}
                     onChange={this.handleChangeTo}
